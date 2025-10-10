@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecomuffins - Deliciosos Muffins</title>
+    <title>Ecotones - Deliciosos Panetoncitos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ---------------- Estilos generales ---------------- */
@@ -471,13 +471,13 @@
 
             <!-- Productos -->
             <section class="products">
-                <div class="product" data-name="Muffins" data-price="3">
+                <div class="product" data-name="Ecotones" data-price="3">
                     <div class="product-image">🧁</div>
                     <p>Muffins Deliciosos</p>
-                    <div class="price">3.00 PEN</div>
+                    <div class="price">1.5 PEN</div>
                     <div class="quantity-controls">
                         <button class="quantity-btn decrease" data-product="Muffins">-</button>
-                        <span id="quantity-Muffins" class="quantity-display">0</span>
+                        <span id="quantity-Ecotones" class="quantity-display">0</span>
                         <button class="quantity-btn increase" data-product="Muffins">+</button>
                     </div>
                 </div>
@@ -502,7 +502,7 @@
         <!-- Página de Contacto -->
         <div id="contact-page" class="page">
             <div class="logo">
-                <h1>Ecomuffins</h1>
+                <h1>Ecotones</h1>
             </div>
             
             <section class="contact-page">
@@ -514,7 +514,7 @@
                     
                     <button id="contact-whatsapp" class="whatsapp-btn">
                         <i class="fab fa-whatsapp"></i>
-                        Contactar a Ecomuffins
+                        Contactar a Ecotones
                     </button>
                 </div>
             </section>
@@ -523,14 +523,14 @@
         <!-- Página de Privacidad -->
         <div id="privacy-page" class="page">
             <div class="logo">
-                <h1>Ecomuffins</h1>
+                <h1>Ecotones</h1>
             </div>
             
             <section class="privacy-page">
                 <h2>Política de Privacidad</h2>
                 
                 <div class="contact-info">
-                    <p>En Ecomuffins valoramos tu privacidad y estamos comprometidos a proteger tus datos personales.</p>
+                    <p>En Ecotones valoramos tu privacidad y estamos comprometidos a proteger tus datos personales.</p>
                 </div>
                 
                 <h3 style="margin: 30px 0 20px; color: #79b448;">Libro de Reclamaciones</h3>
@@ -562,7 +562,7 @@
         </div>
 
         <footer>
-            <p>© 2025 Ecomuffins - Deliciosos Muffins Artesanales</p>
+            <p>© 2025 Ecotones - Deliciosos Panetoncitos </p>
         </footer>
     </div>
 
@@ -676,7 +676,7 @@
         
         // Contactar por WhatsApp
         document.getElementById('contact-whatsapp').addEventListener('click', () => {
-            const message = "¡Hola! Me gustaría contactarme con Ecomuffins para realizar una consulta.";
+            const message = "¡Hola! Me gustaría contactarme con Ecotones para realizar una consulta.";
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, "_blank");
         });
@@ -692,7 +692,7 @@
                 return;
             }
             
-            const message = `LIBRO DE RECLAMACIONES - ECOMUFFINS\n\nFecha: ${date}\nHora: ${time}\n\nDetalles del reclamo:\n${details}`;
+            const message = `LIBRO DE RECLAMACIONES - ECOTONES\n\nFecha: ${date}\nHora: ${time}\n\nDetalles del reclamo:\n${details}`;
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, "_blank");
         });
