@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,6 @@
     <title>Ecotones - Deliciosos Panetoncitos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* --- Estilos generales --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body {
             background: linear-gradient(30deg, #705656, #000000 90%);
@@ -29,8 +28,6 @@
             display: flex;
             flex-direction: column;
         }
-
-        /* --- Navegación --- */
         .header { margin-bottom: 30px; }
         .header nav ul {
             list-style: none;
@@ -56,18 +53,15 @@
             transform: translateY(-3px);
             border-color: #ffffff;
         }
-
-        /* --- Logo --- */
         .logo { text-align: center; margin: 20px 0 40px; }
         .logo h1 {
             font-size: 60px;
             font-weight: 800;
             color: #79b448;
-            text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            text-shadow: 3px 3px 0 #000, -1px -1px 0 #000,
+                         1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
             letter-spacing: 2px;
         }
-
-        /* --- Productos --- */
         .products {
             display: flex;
             justify-content: center;
@@ -102,10 +96,9 @@
             justify-content: center;
             font-size: 80px;
         }
-        .product p { font-size: 24px; font-weight: bold; margin: 10px 0 5px; }
-        .product .price { font-size: 20px; color: #79b448; font-weight: 600; }
-
-        /* --- Botones cantidad --- */
+        .product p { font-size: 22px; font-weight: bold; margin: 10px 0 5px; }
+        .price { font-size: 20px; color: #79b448; font-weight: 600; }
+        .details { font-size: 16px; margin-top: 8px; color: #ccc; }
         .quantity-controls {
             display: flex;
             justify-content: center;
@@ -124,8 +117,6 @@
         }
         .quantity-btn:hover { background: #ff8533; }
         .quantity-display { font-size: 20px; font-weight: bold; }
-
-        /* --- Total --- */
         .total-section {
             text-align: center;
             margin: 30px 0;
@@ -136,8 +127,6 @@
         }
         .total-section h2 { font-size: 36px; margin-bottom: 20px; }
         .total-amount { font-size: 42px; color: #79b448; font-weight: 800; }
-
-        /* --- Pedido actual --- */
         .current-order {
             margin-top: 20px;
             background: rgba(255, 255, 255, 0.1);
@@ -148,8 +137,6 @@
         }
         .current-order h3 { margin-bottom: 15px; color: #79b448; text-align: center; font-size: 22px; }
         #order-items { min-height: 50px; text-align: center; padding: 10px; font-style: italic; color: #ccc; }
-
-        /* --- Botón WhatsApp --- */
         .whatsapp-btn {
             background: linear-gradient(to bottom, #25d366, #128C7E);
             color: white;
@@ -165,7 +152,6 @@
             gap: 15px;
         }
         .whatsapp-btn i { font-size: 28px; }
-
         footer {
             margin-top: auto;
             text-align: center;
@@ -181,8 +167,6 @@
             <nav>
                 <ul>
                     <li><a href="#" class="nav-link active" data-page="home">Inicio</a></li>
-                    <li><a href="#" class="nav-link" data-page="contact">Contacto</a></li>
-                    <li><a href="#" class="nav-link" data-page="privacy">Privacidad</a></li>
                 </ul>
             </nav>
         </header>
@@ -191,16 +175,43 @@
             <div class="logo"><h1>Ecotones</h1></div>
 
             <section class="products">
-                <div class="product" data-name="Ecotones" data-price="3.5">
+
+                <div class="product" data-name="Ecotones" data-price="8">
                     <div class="product-image">🌱</div>
                     <p>Ecotones - Panetoncitos ecológicos</p>
-                    <div class="price">S/ 3.50</div>
+                    <div class="details">Panetones: con semilla de calabaza y pasas bañados en chocolate</div>
+                    <div class="price">S/ 8.00</div>
                     <div class="quantity-controls">
                         <button class="quantity-btn decrease" data-product="Ecotones">-</button>
                         <span id="quantity-Ecotones" class="quantity-display">0</span>
                         <button class="quantity-btn increase" data-product="Ecotones">+</button>
                     </div>
                 </div>
+
+                <div class="product" data-name="Kéfir" data-price="8">
+                    <div class="product-image">🥛</div>
+                    <p>Kéfir Artesanal</p>
+                    <div class="details">Kefir: chocolate, natural, fresa, mango</div>
+                    <div class="price">S/ 8.00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn decrease" data-product="Kéfir">-</button>
+                        <span id="quantity-Kéfir" class="quantity-display">0</span>
+                        <button class="quantity-btn increase" data-product="Kéfir">+</button>
+                    </div>
+                </div>
+
+                <div class="product" data-name="Helados" data-price="5">
+                    <div class="product-image">🍦</div>
+                    <p>Helados Naturales</p>
+                    <div class="details">Helados: fresa, mango y pistacho</div>
+                    <div class="price">S/ 5.00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn decrease" data-product="Helados">-</button>
+                        <span id="quantity-Helados" class="quantity-display">0</span>
+                        <button class="quantity-btn increase" data-product="Helados">+</button>
+                    </div>
+                </div>
+
             </section>
 
             <div class="current-order">
@@ -225,16 +236,14 @@
         let total = 0;
         const selectedProducts = {};
         const orderItemsElement = document.getElementById('order-items');
-        const whatsappNumber = "+51923966738";
+        const whatsappNumber = "+51951344340";
         
-        // Inicializar productos
         document.querySelectorAll('.product').forEach(product => {
             const productName = product.getAttribute('data-name');
             const productPrice = parseFloat(product.getAttribute('data-price'));
             selectedProducts[productName] = { price: productPrice, quantity: 0 };
         });
 
-        // Botones + y -
         document.querySelectorAll(".quantity-btn").forEach(button => {
             button.addEventListener("click", () => {
                 const productName = button.getAttribute('data-product');
@@ -277,7 +286,7 @@
                 alert("Por favor, selecciona al menos un producto antes de enviar el pedido.");
                 return;
             }
-            let message = "¡Hola! Quiero hacer el siguiente pedido de Ecotones:\n\n";
+            let message = "¡Hola! Quiero hacer el siguiente pedido:\n\n";
             for (const [name, data] of productsWithQuantity) {
                 message += `• ${data.quantity} x ${name} - S/ ${(data.price * data.quantity).toFixed(2)}\n`;
             }
@@ -287,4 +296,6 @@
         });
     </script>
 </body>
+</html>
+
 </html>
