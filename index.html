@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecotones - Deliciosos Panetoncitos</title>
+    <title>NATURE ROOTS - Deliciosos Panetoncitos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -53,7 +53,9 @@
             transform: translateY(-3px);
             border-color: #ffffff;
         }
-        .logo { text-align: center; margin: 20px 0 40px; }
+
+        /* LOGO + subtítulo */
+        .logo { text-align: center; margin: 20px 0 10px; }
         .logo h1 {
             font-size: 60px;
             font-weight: 800;
@@ -62,6 +64,39 @@
                          1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
             letter-spacing: 2px;
         }
+        .logo h2 {
+            font-size: 22px;
+            margin-top: -10px;
+            color: #ffffff;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Redes */
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .instagram-btn { background: #d6249f; }
+        .instagram-btn:hover { background: #b71e8b; }
+        .tiktok-btn { background: #000; }
+        .tiktok-btn:hover { background: #222; }
+
         .products {
             display: flex;
             justify-content: center;
@@ -172,10 +207,27 @@
         </header>
 
         <div id="home-page" class="page active">
-            <div class="logo"><h1>Ecotones</h1></div>
+            
+            <!-- Título + Subtítulo -->
+            <div class="logo">
+                <h1>NATURE ROOTS</h1>
+                <h2>Energía nutritiva que te impulsa</h2>
+            </div>
+
+            <!-- Botones redes -->
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/nature.roots.fd?igsh=OWdjaWdqc3ByajA%3D&utm_source=qr" target="_blank">
+                    <button class="social-btn instagram-btn"><i class="fab fa-instagram"></i> Instagram</button>
+                </a>
+
+                <a href="https://www.tiktok.com/@nature.roots6?_r=1&_t=ZS-927lX75U9JK" target="_blank">
+                    <button class="social-btn tiktok-btn"><i class="fab fa-tiktok"></i> TikTok</button>
+                </a>
+            </div>
 
             <section class="products">
 
+                <!-- PANETONES -->
                 <div class="product" data-name="Ecotones" data-price="8">
                     <div class="product-image">🌱</div>
                     <p>Ecotones - Panetoncitos ecológicos</p>
@@ -188,27 +240,60 @@
                     </div>
                 </div>
 
-                <div class="product" data-name="Kéfir" data-price="8">
+                <!-- KÉFIR SUBDIVIDIDO -->
+                <div class="product">
                     <div class="product-image">🥛</div>
                     <p>Kéfir Artesanal</p>
-                    <div class="details">Kefir: chocolate, natural, fresa, mango</div>
-                    <div class="price">S/ 8.00</div>
+                    <div class="details">Opciones: Pequeño / Mediano / Grande</div>
+
+                    <!-- Pequeño -->
+                    <p style="margin-top:10px;">Pequeño - S/ 10</p>
                     <div class="quantity-controls">
-                        <button class="quantity-btn decrease" data-product="Kéfir">-</button>
-                        <span id="quantity-Kéfir" class="quantity-display">0</span>
-                        <button class="quantity-btn increase" data-product="Kéfir">+</button>
+                        <button class="quantity-btn decrease" data-product="Kéfir_Pequeño">-</button>
+                        <span id="quantity-Kéfir_Pequeño" class="quantity-display">0</span>
+                        <button class="quantity-btn increase" data-product="Kéfir_Pequeño">+</button>
+                    </div>
+
+                    <!-- Mediano -->
+                    <p>Mediano - S/ 15</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn decrease" data-product="Kéfir_Mediano">-</button>
+                        <span id="quantity-Kéfir_Mediano" class="quantity-display">0</span>
+                        <button class="quantity-btn increase" data-product="Kéfir_Mediano">+</button>
+                    </div>
+
+                    <!-- Grande -->
+                    <p>Grande - S/ 20</p>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn decrease" data-product="Kéfir_Grande">-</button>
+                        <span id="quantity-Kéfir_Grande" class="quantity-display">0</span>
+                        <button class="quantity-btn increase" data-product="Kéfir_Grande">+</button>
                     </div>
                 </div>
 
-                <div class="product" data-name="Helados" data-price="5">
+                <!-- HELADOS (precio modificado) -->
+                <div class="product" data-name="Helados" data-price="7">
                     <div class="product-image">🍦</div>
                     <p>Helados Naturales</p>
                     <div class="details">Helados: fresa, mango y pistacho</div>
-                    <div class="price">S/ 5.00</div>
+                    <div class="price">S/ 7.00</div>
                     <div class="quantity-controls">
                         <button class="quantity-btn decrease" data-product="Helados">-</button>
                         <span id="quantity-Helados" class="quantity-display">0</span>
                         <button class="quantity-btn increase" data-product="Helados">+</button>
+                    </div>
+                </div>
+
+                <!-- CHEESECAKE NUEVO -->
+                <div class="product" data-name="Cheesecake" data-price="8">
+                    <div class="product-image">🍰</div>
+                    <p>Cheesecake de Pistacho</p>
+                    <div class="details">Suave, cremoso y con pistacho natural</div>
+                    <div class="price">S/ 8.00</div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn decrease" data-product="Cheesecake">-</button>
+                        <span id="quantity-Cheesecake" class="quantity-display">0</span>
+                        <button class="quantity-btn increase" data-product="Cheesecake">+</button>
                     </div>
                 </div>
 
@@ -228,7 +313,7 @@
         </div>
 
         <footer>
-            <p>© 2025 Ecotones - Panetoncitos ecológicos</p>
+            <p>© 2025 NATURE ROOTS - Alimentación saludable</p>
         </footer>
     </div>
 
@@ -237,13 +322,21 @@
         const selectedProducts = {};
         const orderItemsElement = document.getElementById('order-items');
         const whatsappNumber = "+51951344340";
-        
-        document.querySelectorAll('.product').forEach(product => {
+
+        // Inicializar productos con precios
+        // Panetones, Helados, Cheesecake se obtienen desde data-price
+        document.querySelectorAll('.product[data-name]').forEach(product => {
             const productName = product.getAttribute('data-name');
             const productPrice = parseFloat(product.getAttribute('data-price'));
             selectedProducts[productName] = { price: productPrice, quantity: 0 };
         });
 
+        // Agregar subdivisiones de Kéfir
+        selectedProducts["Kéfir_Pequeño"] = { price: 10, quantity: 0 };
+        selectedProducts["Kéfir_Mediano"] = { price: 15, quantity: 0 };
+        selectedProducts["Kéfir_Grande"] = { price: 20, quantity: 0 };
+
+        // Manejo de botones + y -
         document.querySelectorAll(".quantity-btn").forEach(button => {
             button.addEventListener("click", () => {
                 const productName = button.getAttribute('data-product');
@@ -252,7 +345,9 @@
                 if (isIncrease) selectedProducts[productName].quantity++;
                 else if (selectedProducts[productName].quantity > 0) selectedProducts[productName].quantity--;
 
-                document.getElementById(`quantity-${productName}`).textContent = selectedProducts[productName].quantity;
+                document.getElementById(`quantity-${productName}`).textContent =
+                    selectedProducts[productName].quantity;
+
                 updateTotal();
                 updateOrderDisplay();
             });
@@ -267,35 +362,44 @@
         }
 
         function updateOrderDisplay() {
-            const productsWithQuantity = Object.entries(selectedProducts).filter(([_, data]) => data.quantity > 0);
+            const productsWithQuantity =
+                Object.entries(selectedProducts).filter(([_, data]) => data.quantity > 0);
+
             if (productsWithQuantity.length === 0) {
                 orderItemsElement.innerHTML = "No has seleccionado productos aún";
                 return;
             }
+
             let orderHTML = "<ul>";
             for (const [name, data] of productsWithQuantity) {
-                orderHTML += `<li>${data.quantity} x ${name} - S/ ${(data.price * data.quantity).toFixed(2)}</li>`;
+                orderHTML += `<li>${data.quantity} x ${name.replace("_", " ")} - S/ ${(data.price * data.quantity).toFixed(2)}</li>`;
             }
             orderHTML += "</ul>";
             orderItemsElement.innerHTML = orderHTML;
         }
 
         document.getElementById("send-whatsapp").addEventListener("click", () => {
-            const productsWithQuantity = Object.entries(selectedProducts).filter(([_, data]) => data.quantity > 0);
+            const productsWithQuantity =
+                Object.entries(selectedProducts).filter(([_, data]) => data.quantity > 0);
+
             if (productsWithQuantity.length === 0) {
                 alert("Por favor, selecciona al menos un producto antes de enviar el pedido.");
                 return;
             }
+
             let message = "¡Hola! Quiero hacer el siguiente pedido:\n\n";
+
             for (const [name, data] of productsWithQuantity) {
-                message += `• ${data.quantity} x ${name} - S/ ${(data.price * data.quantity).toFixed(2)}\n`;
+                message += `• ${data.quantity} x ${name.replace("_", " ")} - S/ ${(data.price * data.quantity).toFixed(2)}\n`;
             }
+
             message += `\nTotal: S/ ${total.toFixed(2)}\n\nGracias. 🌱`;
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+            const whatsappURL =
+                `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
             window.open(whatsappURL, "_blank");
         });
     </script>
 </body>
-</html>
-
 </html>
